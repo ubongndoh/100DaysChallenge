@@ -1,0 +1,218 @@
+https://frontendmasters.com/teachers/kyle-simpson/code-is-for-humans/
+
+Code is for Humans Transcript (38 minutes):
+
+    So I wanna just share a little bit about the backstory of what and how I teach, why I do that, some of the observations that I’ve made over the last several years being a teacher. So, before becoming a teacher six or seven years ago, I was a developer.
+
+    I was in your shoes, working at various different jobs, and I did all kinds of different jobs, I mean all kinds of different companies from like giant companies to tiny little startups. I worked in almost every tech stack you can image from Python to DotNet and PHP, just a bunch of different stuff.
+
+    And even different kinds of companies, like consultancy versus product company and all those things in between. And so I bounced around from job to job to job, and quite honestly, I wasn’t a great employee because I was frustrated, and rather than fixing problems when I got frustrated, I just said, I’ll find a different job, right?
+
+    When you work through six or nine months and then you’re frustrated, and then you just jump to a different job. And probably if I could tell my 15-year-ago-self anything, I’d say quit jumping around a job. Figure out how to make something work at your existing job.
+
+    But nevertheless, I kept jumping from job to job because we would run into these problems. And you’d think, you’re sort of, very myopically just dialed in on what your code is, and the technical depth for your particular code base. And then you think, well these problems are unique to this particular set of decisions that we’ve made.
+
+    And so the escape hatch is find a different job, find a totally different kind of company, totally different tech stack and then I’ll be free from those problems. So I would jump from that job to another job, and the problems would look different. But the problems would remain, there would still be these problems.
+
+    It’s not like you just found the unicorn, this great job where everything’s perfect. There were still frustrations with the code, and after a while, after I jumped from job to job to job, I began to realize, maybe more of this is universal than is first evident. When you’re just in that mode, when you’re just so tunnel vision on one particular job, it’s hard to see that some of these problems maybe are more universal for software developers.
+
+    Now I can only speak even remotely about JavaScript but I do believe that some of what I’m sharing is even bigger than that. I think it’s really for all of software development. And so I would jump around from all these jobs and see these same kinds of problems.
+
+    And let me illustrate some of those problems for you, cuz they really drive why I do what I do, why I teach the way that I do. Let me start by asking this question. Have you ever had a piece of code, that it broke but you just had no idea why it broke?
+
+    It seemed like it had been working before and now all of a sudden it’s been broken and you just can’t figure out why. And that is I guess about as universal as it gets for software developers, right? Is that we write this piece of code, and then it breaks and we’re just pulling our hair out, we can’t figure out why it’s broken.
+
+    But let me ask a more probing question, one that’s sometimes a little harder to nod at. Have you ever written a piece of code that worked and you had no idea why it worked? And I didn’t think that was a problem at the time as a software developer bouncing around from job to job.
+
+    I didn’t think that was a problem. I thought it was just how things are. Software developers don’t really know what we’re doing. We’re all just sort of making it up. But I’ve come to believe that that is a signal of one of these deeper, more universal problems. That we write code so much and it’s sort of a, maybe you’ve done this before because I’ve done it I can’t even count how many times, I can’t get this piece of code to work and so I’m like, all right, wrap some parentheses around it and put a plus one on it and wrap a try-catch around it. And at some point, it just accidentally works. The test case passes. And then you’re like, let me back up and just hopefully this doesn’t break, right?
+
+    You put a little to do comment, like a little code comment there, like nobody touch this. This is house of cards design right? I can barely get this thing to balance, please nobody breathe on it. Don’t know why it works, don’t know why it balances but let’s just ship it that way.
+
+    All right? And while that can feel gratifying to ship a piece of code, in the back of my mind it always bugged me. Maybe you’re that way. Maybe you’ve been bugged by, why do I ship all this code and I’m not really certain why it’s working? And I wonder If that problem of not understanding our code is one of these universal issues, and I wonder if it actually is systemic that it leads to a lot of our other problems.
+
+    That the more problems that, that it causes more of those kinds of problems, like for example, trying to debug things. That if we’re trying to debug something that was working, but we didn’t know why it was working in the first place, isn’t it much harder to understand how to fix it?
+
+    As a matter of fact, I would say it this way. If you don’t know why your code works, you have no hope of fixing it when it breaks, other than sheer luck and guessing and magic. I refer to this as getify’s law #42, okay? If you don’t know why your code works, you have no hope of fixing it when it breaks.
+
+    And yet, we do this all the time. I like to refer to this, we’re professional guessers, we just hope that it works. The only profession I’ve ever found that can get away with professional guessing is weathermen. Right, the weatherman just guesses maybe it’ll be sunny, maybe it’ll snow, who knows? 50⁄50 chance.
+
+    But yet, should our profession be that way? Should it really be that we ship code, and we tell our boss yes, the feature is finished? And yet we have almost no confidence that it’s gonna continue to do what it was supposed to be doing, cuz we don’t even understand why it’s doing it now.
+
+    This is a true story, I literally had a bug one time, I’ve never figured this out. I had a bug one time, and I put a code comment in and it fixed the bug. Somebody explain to me how that’s possible. I don’t get that, right? And that’s a systemic problem among software developers, that rather than having a confidence that we know what we’re doing and why we’re doing it, and we have a specific plan, we like to think of ourselves as computer scientists, like we’re doing this very on purpose.
+
+    But the reality is, that whole impostor syndrome that we’re all just guessing. And some of us are better at guessing and making it look good than others, right? That’s unfortunately what I’ve seen. My experience as a teacher, I’m so fortunate to have seen such a broad cross-section of software development.
+
+    And I’ve been now in 21 different countries on 6 different continents. Talked to tens of thousands of developers. And guess what? Every one of us is in that exact same boat. This is one of those universal truths, that what we do as a profession, is this professional guessing.
+
+    And while that works, while we collect paychecks, it drives me to believe that there’s something better that we should be striving for. If you’re looking for the one core motivating point that drives me to be a teacher the way I am, it’s this. It is that I would like to know why the code that I write works.
+
+    And I aspire that others would know the same and would be challenged to do the same. Some of you may have heard this conversation before. You’ve been working on a bug for eight hours that was supposed only to take two. And now the boss or project manager is saying, hey, why is it not fixed?
+
+    And you have no answer to that question cuz you don’t know or you would have already fixed it. And at some point doesn’t that conversation always turn to, it’d be faster if I just rewrote it. It’s another one of those universal experiences, universal problems within software development is that we don’t understand why the code works in the first place, so we have no hope of fixing it when it breaks.
+
+    So eventually we just say, let me rewrite it. And we do so based upon the ego. And let’s just be honest, it’s ego that says, well when I rewrite it, it’ll be right. Whoever that dummy was that wrote it the first time, actually it was me three weeks ago.
+
+    But it doesn’t matter, whoever wrote it before, they didn’t know what they were doing, but this time I’m gonna get it right. And then what happens six months from now? Somebody doesn’t understand that piece of code when there’s some bug or feature that needs to get extended. And guess what they say to their boss?
+
+    It’d be faster if I just rewrote that. I want you to think about this for just a minute, this is sort of a thought experiment, it’s like a Google interview kind of thought experiment. There’s probably no way to give real answers to it, but I just want you to think about this.
+
+    How many lines of code do you think are currently in existence running today globally? There’s no right answer to this question, but I know specifically, I have heard specifically of code bases that just one code base had 200 million lines of code in the code base. So if there’s a few of those we’ve got to be talking in the tens maybe even hundreds of billions of lines of code in existence today that runs somewhere, does something.
+
+    Okay, tens, maybe hundreds of billions, that’s a lot of lines of code. But here’s the more important question that I wanna ask you. How many zeros do we need to add to that number, whatever it is, to account for all the lines of code that have ever been written?
+
+    How many lines of code have been rewritten, not once, not twice, not ten times, hundreds of times. If you’re looking for one of those systemic problems, not just a one-off kind of problem, but a systemic problem that creates other problems in its wake. The inability to understand code to the extent that your only solution is to rewrite it , that’s one of those systemic universal problems.
+
+    So what we’re getting at here is that we can’t figure it out when it works the first time. We can’t figure out why it breaks, so we rewrite it and then the cycle restarts. And we can’t figure out why what we rewrote works. And then we can’t figure out why what we rewrote has been broken, and that cycle just keeps perpetuating itself.
+
+    And so eventually somebody says, hey there’s this new framework that’s been released. Let’s re-write the whole code base in the new framework, cause it will certainly fix this problem. And the cycle starts all over again. And it doesn’t matter what technology you’re using. This is one of those, I’m convinced, one of those universal problems.
+
+    Let me illustrate it straight this way, this idea of not understanding code. How many of you have ever written an if statement? And hopefully your hands go up. If you’re a developer, you’ve written an if statement. But let me ask you this, how many of you written an if statement that had no else clause in it, okay?
+
+    Here’s an example. This if statement checks for some mythical, is it logged in, is the user currently logged in, and then it pulls a session from some cash somewhere, right? And there’s no else clause. And here I’ve been extra generous with my time and put a code comment to indicate the idea that there’s no else clause, right?
+
+    Most of the time we don’t even take that effort. But think about this for a moment. What was the process that allowed you to figure out that there was no need for an else clause? Think about that process for a moment, like if you had written this code, what you did was you went through all the possible scenarios, all the values that could come into that if statement, all the conditions that could occur.
+
+    You went through all of them and in all of those scenarios, the else clause was essentially empty And so because you don’t want your linter to complain at you, goodness knows. You take the else clause off. We don’t wanna leave an empty clause, for sure. Don’t want the linter complaint.
+
+    So you take off the else clause. Now I want you to imagine that process of figuring out that there’s no need for an else clause, it’s like you’re constructing, I want you to visualize, like a cloud, a bubble around your head. This is your mental context when you are writing this code, you’re thinking about the code you need to write, but critically you’re also thinking about the code that you don’t need to write.
+
+    All of that you’re thinking about, you’re doing all that execution. And the good news is you’re excellent at what you do. I go all over the place and I know there’s maybe a prevailing feeling, that whole idea that we’re imposters and we’re guessing that we’re bad at our jobs, you’re actually excellent at your jobs.
+
+    You’re here and you’re watching this course because you’re great at your job, you’re great at what you do. So you probably got it all right, that whole mental context that you probably got the analysis correct. From the developers that I have experienced, by and large, I see developers that are very competent, that are excellent at what they do, which is to say they can ship lots of code to production, okay.
+
+    So you probably did that analysis correctly. You figured out that you didn’t eat an else clause. But here’s the pressing probing question, the one that sometimes actually keeps me up at night. How much of that mental context did you communicate in the code? And here’s a hint, zero.
+
+    You did all of that analysis and you communicated none of it in the code. Now that may not seem like such a big deal, but let’s play this out the way things always play out in reality. The way things always play out is that that if statement will work right now and it’ll pass whatever kind of patchwork of tests or probably no tests at all, cuz we all cut corners and don’t write tests.
+
+    But whenever it looks good enough, ship it. Boss says ship it so it goes to production. Now it doesn’t matter who wrote this code, it could have been you, it could have been somebody else. After three weeks, it might as well have been written by somebody else, so, doesn’t matter who wrote it.
+
+    But six months go by, everything’s been humming along fine and then, you get notified that there’s a bug and this is not like any ol bug, like a P3 priority, like, get to when you can. This is an oh my God, my hair is on fire, production is down and we’re losing millions of dollars a second.
+
+    This has to be fixed now, kind of bug, okay? Cuz they’re always that way, right? They’re always the worst possible bug right before Christmas break. I hate those, okay? So this is that bug! And it falls on your lap, on your shoulders, to figure out what do I do to fix this?
+
+    Doesn’t matter whether you wrote the code or not, you certainly don’t remember any of this code. So you come back to this code and you’re searching through all this code trying to figure it out and the pressure is on. The boss is literally breathing down your neck when’s this gonna get fixed?
+
+    And you run across this if statement. And you notice it has no else clause. Tell me what is guaranteed to be one of your first questions that runs across your mind? Why is there no else clause? And more importantly than that, is the missing else clause the source of this bug?
+
+    So how are you gonna answer that question? It is not obvious why there is no else clause. It could be accidentally omitted, or it might have been intentionally not there, cuz we don’t want the linter complaints. But none of that is clear from the code, so how are you gonna answer that?
+
+    You are going to reconstruct that mental bubble that the original code author, maybe your past self, constructed. Except, when you wrote it the first time, everything was fine. You had all the time in the world, no pressure, You got it right, now you have to reconstruct it under the worst possible circumstances.
+
+    Not only the pressure is on, but probably there’s no test and probably there’s no documentation. And the stakes are really high cuz you gotta get it perfect, why? Because if that legitimately is the source of the bug, and you’re looking at the code, and you don’t realize it.
+
+    And you go on and spend five days looking at all the other code, only to come back and realize that you missed that that was the bug. Probably somebody’s might be maybe get fired, right? You gotta get it right under the worst possible conditions. When people say that code is so hard to understand that it’d be faster if I just rewrote it, what they’re really saying is the code doesn’t communicate its ideas.
+
+    I don’t understand from this code what it’s trying to do, but I know what I could do is rewrite it so that I can understand it. But I’m not gonna pay any attention to whether other people will understand it. Just me, I wanna understand it. Until three weeks ago by and now you don’t understand it either.
+
+    And the problem is that we keep constructing these mental bubbles as we write code. And then we don’t communicate in the code what we’re thinking. And then we have to reconstruct these bubbles over, and over, and over again. What I’m getting at here is that the difficulty of understanding code comes directly from our inability and unwillingness to insist that the code communicate our ideas.
+
+    Let me give you another example, this is a much simpler one. Say you write some code like this, and on line 1 and 2, the version of this code, you just say base _ rate + extra, okay? You’re calculating the shipping cost for your Amazon clone, okay? Base _ rate + extra, and you know, because you’ve dabbled a bit in programming before, that there’s a thing called operator precedence.
+
+    You know that base _ rate + extra is going to multiply base _ rate first and then it’s gonna add extra in. You know that because you’ve watched a wat video somewhere, or you’ve looked at a Stack Overflow question, or you read an MDN post or something. But you know that the multiplication operator has higher precedence than the plus operator, so you just write the code.
+
+    And then somebody comes along and they add some parentheses in to clarify that that thing is gonna be multiplied first and then added in. And immediately, your linter says unnecessary parens, take those out. Anybody ever had one of those rules pop up and it tells you you’re trying to put something in that’s completely unnecessary?
+
+    So you take them back out, you leave them like the version on line 1 and 2. And I think what I’m getting at here is that that linter’s perspective was, what code does the computer need? The computer doesn’t need the parentheses. The computer knows all about operator precedence. But that’s not who we ought to be paying attention to.
+
+    Who we ought to be paying attention to are the people that need to read the code. The problem we have here is that we’re writing our code primarily for the computer. And I got news for you, that’s not who source code is for, okay? All of the systemic universal problems that I’ve been observing, they’re all coming directly.
+
+    I’m convinced, I believe this as deeply as I could believe any religious belief, they’re all coming directly because we’ve spent our entire industry, the entire 60 years plus of computing science, figuring out how to optimize our code for the computer. Instead of optimizing for the person who’s gonna read that code.
+
+    Do you know that computer science theory tells us that within the scope of correctly functioning programs, that is, programs that at least seem to do what we want at this exact moment, within that scope of programs, do you know there’s an infinite number of ways to write the same program?
+
+    Not just infinite languages. Literally, within JavaScript there’s an infinite number of ways to structure that program. That kinda blows my mind cuz that’s a really big number, right? I think that it feels like it ought to be fixed at a million or something. But somehow, mathematically we can prove that there’s an infinite number of ways to write that same program.
+
+    That’s a lot of choices, and so how we would we decide among all those choices what the best option is? What metric would we use for best? A lot of people use fastest, right? Fastest code is best, we see case studies that come out from eBay, or whatever it was.
+
+    And they say every quarter of a millisecond that we save gives us another million dollars of revenue, so fastest code is best. Except we don’t even understand, especially as JavaScript developers, what it means to write faster code. We don’t even understand what JavaScript is doing with the code that we write, much less what it’s doing when we tweak something and do plus plus i instead of i plus plus.
+
+    We have some completely broken, busted concept of what might be happening. And it’s like when you write a for loop, right? And you did a plus plus i instead of an i plus plus because you saw some jsPerf benchmark somewhere that said it’s one-tenth of a nanosecond faster. So you put it into all of your for loops.
+
+    And then you also saw some benchmark somewhere that said, I need to cache the length of my arrays before I loop over them. And you do all of this work and you construct this much more complicated for loop. And it’s as if the JavaScript engine just sorta chuckles.
+
+    Thanks very much, but I’m not gonna do a for loop at all. Because it turns out, my second observation, not only are there an infinite number of ways to write the code. And we don’t even have a good sense of the metric to discover what is the best.
+
+    But it turns out whichever one you pick is nothing more than a suggestion to the computer. By definition, the thing that we started doing back in the early 1860s, when we started inventing programming languages. That is, when programmers stopped putting ones and zeros onto punch cards and we started symbolically representing programs.
+
+    By definition, what we were doing is creating a separation, AKA abstraction, between the code that we write and the precise instructions that the computer uses. And we’ve only done that more, and more, and more over the last 60 plus years. We’ve created a wider and wider separation to the extent now when you write some React code, it doesn’t even remotely resemble the actual precise instructions that run in the computer.
+
+    And yet all of us seem to have, as a predisposition, we’re good computer scientists, we’re engineers, and we know about registers. And we all have this perception that plus plus i is faster cuz it uses one less register. And it turns out it doesn’t do plus plus i at all.
+
+    And what we’re doing is obfuscating, and conflating, and confusing our code completely for no purpose. Cuz it turns out, our code is just a suggestion anyway. So I take these two observations, that there’s an infinite number of choices and whichever one you pick is just a suggestion anyway.
+
+    And I come to the conclusion, maybe the purpose of code is not to instruct the computer. Maybe that’s just a happy side effect. Maybe what the real purpose of code is is for communicating ideas with other people. Maybe that’s the first and most important outcome of any source code you write, is you’ve done all this mental analysis, this mental bubble.
+
+    And you’ve done it well, but your job now is you have to communicate it well. Or all of that work was pointless. You see I’m not actually all that convinced or even impressed that you can write code. You tell me you ship eBay.com to 10 billion people a second.
+
+    Okay. You know what I’m interested in? How many of your lines of code survive that next inevitable cycle where somebody’s trying to fix the bug or extend something, and they come across your code, how many of those lines of code that you wrote survive that it’d be faster if I rewrote its cycle?
+
+    I think that is a much more important metric for code quality. How clearly are you able to communicate the ideas in your code so that a future person reading it without your same mental context can figure out what the heck you were thinking, and even if you made a mistake they can spot the mistake and fix it, instead of rewriting all of your code?
+
+    How likely is that? And I’m embarrassed to say all the, who knows, tens or hundreds of thousands of lines of code that I wrote in my career, probably every one of them has been rewritten. Actually, there’s probably a bunch of really crappy code that’s still in production somewhere, but a bunch of code that I cared about has been completely rewritten because guess what?
+
+    I suck at communicating my ideas in code. I still do, and I obsess about this day in and day out. Cuz we don’t even design our programming languages or our tools to optimize for how we read code. So here’s another one of those getify’s Laws. Code that you do not understand is code that you cannot trust, and vice versa, code that you cannot trust is code that you do not understand.
+
+    That’s number 61. It is so vital and critical that we shift our thinking of what we do, cuz I got news for you: the computer is getting better and better, and has since the day that we created it. It’s gotten better and better at solving problems more efficiently and effectively than we solve problems.
+
+    We designed it to do that, and ever since we created the very first computer, they have evolved more quickly than we have. Now I don’t subscribe to that dystopian future where the computers are gonna take over the whole world and there won’t be such a thing as programming.
+
+    I don’t subscribe to that, but what I do know is that we face an existential crisis, not just as a profession, but as a species. We face an existential crisis that we keep trying to compete with the computer at the thing that we designed the computer to be best at.
+
+    That cannot end in success. They are evolving faster than we are. And that, that doesn’t mean that we don’t have some role to play, but our role to play is not to outguess and outsmart the computer, and yet we’ve spent 60 years trying to optimize ourselves to solve the problems better than the computer, instead of trying to figure out how do we optimize it so that this code is more readable and understandable?
+
+    Why do we always optimize for writability? Every time somebody releases some new tools, some new CLI that’s, always boils down to, I’m trying to make it faster for you to write code. Look how many fewer lines of code you have to write to get the same code, and that’s how every blog post goes that launches every project that’s ever been invented.
+
+    Instead of saying here’s this new framework that takes twice as many lines of code, but here’s how much more understandable it is. Why don’t we ever see anybody try to optimize for the readability? It’s been studied by researchers, and they have discovered that during this process of what we do, what we call coding, that as much as 70% of that time we spend reading code.
+
+    70% of our day is spent reading code. Do you know what the global average for lines of code written and committed to production is, per day, per programmer? Ten. Ten lines of code. You wrote 500, but the other 490 had to get deleted, and only ten survived. And why?
+
+    Cuz you spent the other seven hours of your day figuring out where the heck to put those lines of code. Which leads me to another of getify’s Laws. Code must first be read before it can be written. That’s number eight. It’s high up on the list. Code must first be read before it can be written.
+
+    There is no such thing as the write-only code. You don’t get to just write code and then not worry about how readable it is. There’s no such thing. That’s a mythical unicorn. You have to be able to read code to be able to write code. It is directly related to your job, and the only way that you can ensure that your code is gonna survive that cycle, the only way, it doesn’t matter how good the code is, if it’s not readable, it won’t survive.
+
+    The only way is to make it more readable. Now here’s a warning. A warning that I’m about to offend you. But it’s with the best of intention, okay? If your code has to be re-written to be fixed, improved, or extended, you failed. You failed as a software developer, and I have failed more times than I can count, because people have had to re-write my code, because my primary job was to communicate those ideas so that it didn’t have to be re-written, and I failed.
+
+    And I think some of us in this room, some of us watching this can identify with this idea, and we fail at our primary task of communicating our ideas, and should we actually be surprised that we struggle so much as developers? I’m actually amazed that any code ever runs anywhere, at all, as poorly as we do at communicating our ideas.
+
+    We optimize every single process so that we can write more code quickly. So, we’re producing more and more code that nobody can understand, except the computer. There is an inevitable conclusion to that. I’m not trying to write the script for a sci-fi movie, but there’s an inevitable conclusion to that if you keep going.
+
+    So what I’m really suggesting, let me try to make a practical set of suggestions to wrap this up. What I’m really suggesting is that refactoring to make your code more readable, to edit it, to reconstruct it, to come up with better names, to change the organization, whatever you have to do, that that is not just a great idea, but essential. And here’s what I’m suggesting, just take six minutes out of every hour.
+
+    I’m not saying you have to spend your entire day doing nothing but bike shedding over the name of a variable. Six minutes out of every hour, could you take to go back over the code you wrote in the previous 54 minutes and ask yourself, does this variable name make any sense?
+
+    Here’s my trick. I’m a teacher, so my trick is, whenever I look at one of the pieces of code that I wrote, that’s pretty terrible, the immediate question I ask myself is, try to imagine if I had to teach that to a class. What would that look like, and what questions would I get from people if I was trying to explain this to people, and that’s usually my big clue.
+
+    I don’t understand this code well enough, and it needs work, and it’s not gonna be done like that, it’s gonna take multiple revisions over and over again. I go back over my code, over, and over, and over, and over, almost obsessively asking, does it make sense? Am I even remotely communicating my ideas?
+
+    Now some of you are thinking, well that’s all well and good. But what he doesn’t understand is on my team we just have these unreasonable deadlines and there’s just no possible way that my boss or my client would ever allow us to spend 10% more writing code. I got news for you, first of all, you’re not a unique snowflake sorry.
+
+    Because every single developer that I’ve met in every country in every continent, is in exactly the same boat, and I was too. We’re all in exactly the same boat. Is that the people that write the checks don’t understand what we do. And we’ve allowed them for far too long to make decisions that don’t line up well even for their own self-interest.
+
+    You know I talk to managers and companies cause I work with lots of companies and teach it there. And I talk to managers at companies that tell me as much as 50% of their annual budget. That is lots of money, folks. Like billions and trillions, 50% of their annual budget they spend on the overhead of fixing their old code, their, whatever label you want to put on the legacy code or the technical baggage.
+
+    Whatever label you put on it, they spend as much as 50% on that. That’s not all that surprising, from what I’ve seen, not all that surprising. May be surprising that it’s not more. So I think the conversation is wrong here when they say, no, I can’t spend 10% more on that.
+
+    I think the conversation is completely framed wrong, and I think the responsibility’s on our shoulders to have the conversation in the right way. Because, that 70% figure that I talked about, it means that every single microsecond, and every single second that is spent extra on reading, it compounds exponentially.
+
+    It affects the outcome of your team more than your ability to write an arrow function, and save six characters because you’re spending more of your time on it. Therefore, it will compound more quickly. By that same token, any effort that you invest to make things more readable and more understandable, to reduce that 70% time, that will also pay off exponentially, it will compound exponentially.
+
+    So whereas, we are tempted to think of documentation and tests as important and nice to have but ultimately indirect. What I’m telling you is that readability directly impacts your ability to do your job. Cuz every single time your code is written once. It gets read not twice, or 10 times, or even 100 times, but more like 1,000, or 10,000, or 100,000 times until such a time as it gets rewritten, cuz nobody could understand it in the first place.
+
+    So every single moment that you invest - not spend extra - every single moment that you invest in trying to make your code make more sense, trying to more clearly explain the ideas that you have, that directly pays off. And you’re actually shipping more code tomorrow. And then the next week, and the next month, and the next quarter, and the next year. And everybody else on your team doing more and more and more.
+
+    So the way that conversation is wrong is you don’t need to tell your client and boss, I need to spend 10% more time writing code. You need to tell them, I need to spend 10% less time or 20 or 30 or 100% less time wasting my time writing code that’s gonna be rewritten over and over.
+
+    What if I could tell you that I’m not ever going to have my code be rewritten. Think we could take your 50% budget and shrink it a little bit and save a bunch of money and ship a lot more software and everybody gets bonuses and raises? That’s the conversation you need to have with your bosses and clients.
+
+    The impact of readability is almost uncountable. But we know from that 70% figure that it grows faster, the big O, if you will, it grows faster than any time spent on making your writing of code more efficient. This is where we oughta be spending our time. It’s not just a good idea. It’s the whole point of the code that we write.
+
+    It’s the whole point. So you remember I said we face that existential crisis, and we’ve been trying to compete with the computer to do something better, to try to do better at the thing that it was designed to? Here’s the one thing that we’ll always be better at: empathetic communication with other people.
+
+    That’s where we should put our attention cuz it’s the one thing that will always distinguish us from the computer and if it ceases to distinguish us from the computer, then we might as well pack it up, cuz we’re done. That’s why that’s getify’s law number one, that’s what drives what I teach and how I teach.
+
+    When I teach you how to work with JavaScript or how to understand your tools, it’s because ultimately, understanding your tools is how you communicate more effectively. I hope some of these thoughts have pushed you to rethink where you’re putting your efforts in your code. Hope they’ve challenged you to go back and have discussions with your teams about, what is it that we’re really doing here?
+
+    Are we really just trying to make the computer do something? Or are we trying to make a process that works for all of us? Can we collaborate together, can we work together and can we communicate our ideas effectively with each other? That’s the only thing that’s ever going to make the work that you’re doing day-in and day-out make any difference.
+
+    Yeah, you’ll collect the paycheck. But make a difference and survive is if you communicate those ideas well, if your code is more readable. It’s not easy, but that’s the whole reason we have a profession. Cuz otherwise, let’s just let the computer do it. Alright, thank you.
+
