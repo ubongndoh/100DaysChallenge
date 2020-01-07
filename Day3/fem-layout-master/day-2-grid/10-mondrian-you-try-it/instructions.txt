@@ -1,6 +1,7 @@
 10-mondrian-you-try-it Instructions
 
-Now that you've built one Mondrian work of art, try for a second on your own. The broad steps you'll need to follow include:
+Now that you've built one Mondrian work of art, try for a second on your own. 
+The broad steps you'll need to follow include:
 
 1. Determine how many rows and columns the painting has.
 
