@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1 id="title" class="heading-text">FreeCodeCamp Survey Form</h1>
+            <p id="description" class="description-text"> This is a Survey Form for FreeCodeCamp</p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email"
+                    required />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age</label>
+                <input type="number" name="age" id="number" min="8" max="100" class="form-control" placeholder="Age" />
+            </div>
+            <div class="form-group">
+                <p>Select option that best describes your current role?</p>
+                <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full Time Job</option>
+                    <option value="learner">Full Time Learner</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>Gender</p>
+                <label>
+                    <input name="user-recommend" value="male" type="radio" class="input-radio"
+                        checked />Male</label>
+                <label>
+                    <input name="user-recommend" value="female" type="radio" class="input-radio" />Female</label>
+
+                <label><input name="user-recommend" value="other" type="radio" class="input-radio" />Other</label>
+            </div>
+
+            <div class="form-group">
+                <p>
+                    What is your Stack?
+                </p>
+                <select id="most-like" name="mostLike" class="form-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="Frontend">Frontend</option>
+                    <option value="Backend">Backend</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Full-Stack">Full Stack</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>
+                    What are your favorite programming languages?
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+
+                <label>
+                    <input name="prefer" value="html" type="checkbox" class="input-checkbox" />HTML
+                </label>
+                <label>
+                    <input name="prefer" value="css" type="checkbox" class="input-checkbox" />CSS
+                </label>
+                <label>
+                    <input name="prefer" value="Javascript" type="checkbox" class="input-checkbox" />Javascript
+                </label>
+                <label><input name="prefer" value="golang" type="checkbox" class="input-checkbox" />golang
+                </label>
+                <label><input name="prefer" value="php" type="checkbox" class="input-checkbox" />php             
+                </label>
+                <label><input name="prefer" value="ruby" type="checkbox" class="input-checkbox" />ruby
+                </label>
+                <label><input name="prefer" value="java" type="checkbox" class="input-checkbox" />java
+                </label>
+                <label><input name="prefer" value="c++" type="checkbox" class="input-checkbox" />c++
+                </label>
+                <label><input name="prefer" value="python" type="checkbox" class="input-checkbox" />python
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea id="comments" class="input-textarea" name="comment"
+                    placeholder="Enter your comment here..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
