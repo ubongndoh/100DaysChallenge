@@ -494,7 +494,7 @@ input {
     /*  Deals Section  */
     .text {
         text-align: left;
-        margin: 0 0 auto 4em;
+        margin: 0 2em auto 4em;
     }
 
     #deals .text {
